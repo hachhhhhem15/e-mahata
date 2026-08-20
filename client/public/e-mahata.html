@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#003366" />
+    <title>e-mahata | نفطال</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { tajawal: ['Tajawal', 'sans-serif'] },
+            colors: { naftal: { 50: '#edf5fb', 100: '#dcecf8', 600: '#064675', 700: '#003366', 800: '#00264d', yellow: '#FFC20E' } },
+            boxShadow: { portal: '0 22px 55px rgba(0, 51, 102, .14)', card: '0 14px 34px rgba(15, 41, 70, .09)' },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Official Service Gateway: RTL, Naftal Signal Yellow, quiet civic authority. */
+      :root { --blue: #003366; --yellow: #ffc20e; --ink: #1e293b; --soft: #f5f8fb; }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; font-family: Tajawal, sans-serif; background: #f8f9fa; color: var(--ink); }
+      .route-grid { background-image: linear-gradient(rgba(0,51,102,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,51,102,.05) 1px, transparent 1px); background-size: 34px 34px; }
+      .yellow-corner::before { content: ''; position: absolute; width: 7rem; height: 7rem; border-right: 2px solid rgba(255,194,14,.6); border-top: 2px solid rgba(255,194,14,.6); top: -1.5rem; right: 9%; transform: rotate(45deg); }
+      .nav-link { position: relative; padding: .45rem 0; color: #415568; transition: color .18s ease; }
+      .nav-link::after { content: ''; position: absolute; height: 3px; bottom: -1px; right: 0; width: 0; background: var(--yellow); transition: width .18s ease; }
+      .nav-link:hover, .nav-link.active { color: var(--blue); font-weight: 800; }
+      .nav-link:hover::after, .nav-link.active::after { width: 100%; left: 0; }
+      .form-field { min-width: 0; border: 1px solid #d6e0e9; border-radius: .45rem; background: #fff; transition: border-color .16s, box-shadow .16s; }
+      .form-field:focus-within { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0,51,102,.1); }
+      .form-field select { appearance: none; -webkit-appearance: none; width: 100%; border: 0; outline: 0; padding: .95rem 1rem .72rem 2.25rem; background: transparent; font-family: inherit; color: var(--ink); font-size: .92rem; }
+      .step-card { position: relative; border: 1px solid #e2eaf0; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+      .step-card:hover { transform: translateY(-5px); border-color: rgba(0,51,102,.28); box-shadow: 0 18px 36px rgba(0,51,102,.11); }
+      .btn-primary { transition: transform .16s ease, box-shadow .16s ease, background .16s ease; }
+      .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(0,51,102,.22); }
+      .btn-primary:active { transform: scale(.97); }
+      .clip-banner { clip-path: polygon(0 0, 100% 0, 100% 83%, 76% 100%, 0 91%); }
+      .hero-overlay { background: linear-gradient(90deg, rgba(0,31,65,.02) 0%, rgba(0,40,80,.38) 38%, rgba(0,38,78,.94) 100%); }
+      .modal-backdrop { background: rgba(0, 31, 65, .65); backdrop-filter: blur(3px); }
+      .hidden-panel { display: none; }
+      @media (prefers-reduced-motion: no-preference) { .reveal { animation: rise .65s cubic-bezier(.23,1,.32,1) both; } .reveal-2 { animation: rise .65s .11s cubic-bezier(.23,1,.32,1) both; } }
+      @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+      @media (max-width: 1023px) { .clip-banner { clip-path: none; } .hero-overlay { background: linear-gradient(90deg, rgba(0,39,80,.8), rgba(0,39,80,.92)); } }
+    </style>
+  </head>
+  <body>
+    <div class="bg-naftal-800 text-white">
+      <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-5 py-2 text-xs sm:px-8">
+        <p class="flex items-center gap-2 font-bold"><i data-lucide="headset" class="h-4 w-4 text-naftal-yellow"></i> مركز اتصالات نفطال: <bdi class="text-naftal-yellow" dir="ltr">3305</bdi></p>
+        <div class="flex items-center gap-3 text-blue-100"><a class="hover:text-naftal-yellow" href="#">العربية</a><span class="h-3 border-r border-blue-500"></span><a class="hover:text-naftal-yellow" href="#" dir="ltr">Français</a></div>
+      </div>
+    </div>
+
+    <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-3 sm:px-8">
+        <a href="#top" class="flex shrink-0 items-center gap-3" aria-label="العودة للرئيسية">
+          <span class="grid h-12 w-12 place-items-center rounded-xl border border-blue-100 bg-naftal-50"><img src="/manus-storage/emahata-logo_a4748405.png" alt="رمز نفطال" class="h-9 w-9 object-contain" /></span>
+          <span class="leading-none"><strong class="block text-xl font-black tracking-tight text-naftal-700">نفطال</strong><span class="mt-1 block text-sm font-bold tracking-wide text-slate-500" dir="ltr">e-mahata</span></span>
+        </a>
+        <nav class="hidden items-center gap-7 text-sm lg:flex" aria-label="التنقل الرئيسي">
+          <a class="nav-link active" href="#top">الرئيسية</a><a class="nav-link" href="#booking">حجز العجلات المطاطية</a><a class="nav-link" href="#stations">نقاط البيع والمحطات</a><a class="nav-link" href="#tracking">تتبع الطلب</a><a class="nav-link" href="#contact">اتصل بنا</a>
+        </nav>
+        <div class="hidden items-center gap-2 lg:flex">
+          <button class="rounded-md border border-naftal-700 px-4 py-2 text-sm font-bold text-naftal-700 transition hover:bg-naftal-50" data-open-modal="login">تسجيل الدخول</button>
+          <button class="rounded-md bg-naftal-yellow px-4 py-2 text-sm font-extrabold text-naftal-800 transition hover:bg-yellow-300" data-open-modal="signup">إنشاء حساب</button>
+        </div>
+        <button id="mobileMenuBtn" class="grid h-10 w-10 place-items-center rounded-md border border-slate-200 text-naftal-700 lg:hidden" aria-label="فتح القائمة"><i data-lucide="menu" class="h-5 w-5"></i></button>
+      </div>
+      <div id="mobileMenu" class="hidden border-t border-slate-100 bg-white px-5 pb-5 lg:hidden">
+        <nav class="grid gap-1 pt-3 text-sm font-bold text-slate-700"><a class="rounded-md px-3 py-2 hover:bg-naftal-50" href="#top">الرئيسية</a><a class="rounded-md px-3 py-2 hover:bg-naftal-50" href="#booking">حجز العجلات المطاطية</a><a class="rounded-md px-3 py-2 hover:bg-naftal-50" href="#stations">نقاط البيع والمحطات</a><a class="rounded-md px-3 py-2 hover:bg-naftal-50" href="#tracking">تتبع الطلب</a><a class="rounded-md px-3 py-2 hover:bg-naftal-50" href="#contact">اتصل بنا</a></nav>
+        <div class="mt-3 grid grid-cols-2 gap-2"><button class="rounded-md border border-naftal-700 px-3 py-2 text-sm font-bold text-naftal-700" data-open-modal="login">تسجيل الدخول</button><button class="rounded-md bg-naftal-yellow px-3 py-2 text-sm font-extrabold text-naftal-800" data-open-modal="signup">إنشاء حساب</button></div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="relative isolate min-h-[510px] overflow-hidden bg-naftal-700 lg:min-h-[535px]">
+        <img src="/manus-storage/emahata-hero-naftal_a7338b2b.jpg" alt="محطة نفطال على طريق جزائري" class="absolute inset-0 h-full w-full object-cover object-center" />
+        <div class="hero-overlay absolute inset-0"></div><div class="yellow-corner absolute inset-0 overflow-hidden"></div>
+        <div class="relative mx-auto flex min-h-[510px] max-w-7xl items-center px-5 pt-7 sm:px-8 lg:min-h-[535px]">
+          <div class="max-w-2xl text-right text-white">
+            <div class="reveal mb-5 inline-flex items-center gap-2 rounded-full border border-yellow-300/50 bg-blue-950/30 px-4 py-2 text-sm font-bold text-yellow-100"><span class="h-2 w-2 rounded-full bg-naftal-yellow"></span> خدمات نفطال الرقمية بين يديك</div>
+            <h1 class="reveal text-4xl font-black leading-[1.35] sm:text-5xl">اقتناء العجلات المطاطية<br /><span class="text-naftal-yellow">بكل سهولة وشفافية</span></h1>
+            <p class="reveal-2 mt-5 max-w-xl text-lg leading-8 text-blue-50">منصة e-mahata الرقمية تتيح لك حجز العجلات المناسبة لمركبتك واختيار أقرب مركز استلام من محطات نفطال.</p>
+            <div class="reveal-2 mt-8 flex flex-wrap items-center gap-3"><button id="heroStartBtn" class="btn-primary inline-flex items-center gap-2 rounded-md bg-naftal-yellow px-6 py-3.5 text-base font-extrabold text-naftal-800"><i data-lucide="arrow-left" class="h-5 w-5"></i> ابدأ طلبي الآن</button><a href="#stations" class="inline-flex items-center gap-2 rounded-md border border-white/60 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10"><i data-lucide="map-pin" class="h-4 w-4"></i> ابحث عن محطة</a></div>
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 h-2 w-2/5 bg-naftal-yellow"></div>
+      </section>
+
+      <section id="booking" class="relative z-10 -mt-11 px-4 pb-16 sm:px-8 lg:-mt-16">
+        <div class="mx-auto max-w-7xl rounded-xl border border-slate-200 bg-white p-5 shadow-portal sm:p-7">
+          <div class="mb-6 flex flex-wrap items-start justify-between gap-4 border-b border-slate-100 pb-5">
+            <div><div class="mb-2 flex items-center gap-2 text-xs font-bold text-naftal-600"><span class="h-1.5 w-1.5 rounded-full bg-naftal-yellow"></span> الحجز الذكي</div><h2 class="text-2xl font-black text-naftal-700">ابحث عن العجلات المناسبة لمركبتك</h2><p class="mt-1 text-sm text-slate-500">أدخل المقاس وحدد نقطة الاستلام لعرض الخيارات المتاحة.</p></div>
+            <div class="flex items-center gap-2 rounded-md bg-naftal-50 px-3 py-2 text-xs font-bold text-naftal-700"><i data-lucide="shield-check" class="h-4 w-4 text-naftal-600"></i> معلوماتك محمية وآمنة</div>
+          </div>
+          <form id="tireSearchForm" class="grid gap-3 md:grid-cols-2 xl:grid-cols-6" novalidate>
+            <label class="form-field relative block"><span class="absolute right-4 top-2 text-[11px] font-bold text-slate-500">العرض</span><select required aria-label="عرض العجلة"><option value="">اختر العرض</option><option>175</option><option>185</option><option>195</option><option>205</option><option>215</option></select><i data-lucide="chevron-down" class="pointer-events-none absolute left-3 top-4 h-4 w-4 text-slate-400"></i></label>
+            <label class="form-field relative block"><span class="absolute right-4 top-2 text-[11px] font-bold text-slate-500">الارتفاع</span><select required aria-label="ارتفاع العجلة"><option value="">اختر الارتفاع</option><option>55</option><option>60</option><option>65</option><option>70</option></select><i data-lucide="chevron-down" class="pointer-events-none absolute left-3 top-4 h-4 w-4 text-slate-400"></i></label>
+            <label class="form-field relative block"><span class="absolute right-4 top-2 text-[11px] font-bold text-slate-500">القطر</span><select required aria-label="قطر العجلة"><option value="">اختر القطر</option><option>13</option><option>14</option><option>15</option><option>16</option></select><i data-lucide="chevron-down" class="pointer-events-none absolute left-3 top-4 h-4 w-4 text-slate-400"></i></label>
+            <label class="form-field relative block"><span class="absolute right-4 top-2 text-[11px] font-bold text-slate-500">الولاية</span><select id="wilaya" required aria-label="الولاية"><option value="">اختر الولاية</option><option>الجزائر</option><option>وهران</option><option>قسنطينة</option><option>البليدة</option><option>سطيف</option></select><i data-lucide="chevron-down" class="pointer-events-none absolute left-3 top-4 h-4 w-4 text-slate-400"></i></label>
+            <label class="form-field relative block"><span class="absolute right-4 top-2 text-[11px] font-bold text-slate-500">مركز الاستلام</span><select id="station" required aria-label="مركز الاستلام"><option value="">اختر المركز</option><option>محطة نفطال الشراقة</option><option>محطة نفطال باب الزوار</option><option>محطة نفطال وهران</option><option>محطة نفطال قسنطينة</option></select><i data-lucide="chevron-down" class="pointer-events-none absolute left-3 top-4 h-4 w-4 text-slate-400"></i></label>
+            <button type="submit" class="btn-primary flex min-h-[57px] items-center justify-center gap-2 rounded-md bg-naftal-700 px-5 text-sm font-extrabold text-white hover:bg-naftal-800"><i data-lucide="search" class="h-5 w-5 text-naftal-yellow"></i> عرض الخيارات</button>
+          </form>
+          <div id="formAlert" class="hidden mt-4 rounded-md border px-4 py-3 text-sm font-bold" role="status"></div>
+        </div>
+      </section>
+
+      <section class="bg-white py-16">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8">
+          <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"><div class="max-w-xl"><p class="mb-2 text-sm font-extrabold text-naftal-600">مسار بسيط وواضح</p><h2 class="text-3xl font-black leading-tight text-naftal-700">خطوات التسجيل والطلب</h2><p class="mt-3 leading-7 text-slate-600">من إنشاء حسابك حتى استلام العجلات من المحطة، نرافقك في كل خطوة.</p></div><div class="hidden items-center gap-2 text-sm font-bold text-slate-500 lg:flex"><span class="h-px w-16 bg-slate-200"></span><span>4 خطوات</span></div></div>
+          <div class="mt-9 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <article class="step-card rounded-lg bg-white p-6"><span class="absolute left-5 top-4 text-5xl font-black leading-none text-naftal-50">01</span><div class="relative grid h-12 w-12 place-items-center rounded-md bg-naftal-50 text-naftal-700"><i data-lucide="user-round-plus" class="h-6 w-6"></i></div><h3 class="relative mt-5 text-lg font-black text-naftal-700">أنشئ حسابك</h3><p class="relative mt-2 text-sm leading-6 text-slate-600">سجّل بياناتك وأضف وثائق مركبتك بأمان.</p></article>
+            <article class="step-card rounded-lg bg-white p-6"><span class="absolute left-5 top-4 text-5xl font-black leading-none text-naftal-50">02</span><div class="relative grid h-12 w-12 place-items-center rounded-md bg-yellow-50 text-naftal-700"><i data-lucide="circle-dot-dashed" class="h-6 w-6"></i></div><h3 class="relative mt-5 text-lg font-black text-naftal-700">اختر العجلات</h3><p class="relative mt-2 text-sm leading-6 text-slate-600">حدّد المقاس المناسب والكمية المطلوبة لمركبتك.</p></article>
+            <article class="step-card rounded-lg bg-white p-6"><span class="absolute left-5 top-4 text-5xl font-black leading-none text-naftal-50">03</span><div class="relative grid h-12 w-12 place-items-center rounded-md bg-naftal-50 text-naftal-700"><i data-lucide="map-pinned" class="h-6 w-6"></i></div><h3 class="relative mt-5 text-lg font-black text-naftal-700">حدّد مركز الاستلام</h3><p class="relative mt-2 text-sm leading-6 text-slate-600">اختر محطة نفطال الأقرب إليك للاستلام.</p></article>
+            <article class="step-card rounded-lg bg-white p-6"><span class="absolute left-5 top-4 text-5xl font-black leading-none text-naftal-50">04</span><div class="relative grid h-12 w-12 place-items-center rounded-md bg-yellow-50 text-naftal-700"><i data-lucide="badge-check" class="h-6 w-6"></i></div><h3 class="relative mt-5 text-lg font-black text-naftal-700">أكّد طلبك</h3><p class="relative mt-2 text-sm leading-6 text-slate-600">استلم وادفع ببطاقة الذهبية أو CIB في المركز.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="stations" class="route-grid overflow-hidden bg-slate-50 py-16">
+        <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-[1.1fr_.9fr]">
+          <div><p class="mb-2 text-sm font-extrabold text-naftal-600">شبكة وطنية في خدمتك</p><h2 class="max-w-xl text-3xl font-black leading-tight text-naftal-700">اعثر على أقرب محطة<br />أو نقطة بيع معتمدة</h2><p class="mt-4 max-w-lg leading-7 text-slate-600">تحقق من موقع مركز الاستلام وساعات الخدمة قبل تأكيد طلبك. نعمل على توفير تجربة استلام منظمة وقريبة من مسارك.</p><div class="mt-7 flex flex-wrap gap-3"><button class="btn-primary inline-flex items-center gap-2 rounded-md bg-naftal-700 px-5 py-3 text-sm font-extrabold text-white" data-open-modal="station"><i data-lucide="map" class="h-4 w-4 text-naftal-yellow"></i> فتح خريطة المحطات</button><a href="#booking" class="rounded-md border border-naftal-700 px-5 py-3 text-sm font-extrabold text-naftal-700 transition hover:bg-naftal-50">البدء بالحجز</a></div><div class="mt-8 flex flex-wrap gap-6 border-t border-slate-200 pt-6 text-sm"><span class="flex items-center gap-2 font-bold text-slate-700"><i data-lucide="clock-3" class="h-4 w-4 text-naftal-600"></i> ساعات الخدمة حسب المركز</span><span class="flex items-center gap-2 font-bold text-slate-700"><i data-lucide="navigation" class="h-4 w-4 text-naftal-600"></i> إرشادات وصول واضحة</span></div></div>
+          <div class="relative"><div class="absolute -inset-6 -rotate-3 rounded-2xl bg-naftal-100"></div><img src="/manus-storage/emahata-locator_b93a6f20.jpg" alt="رسم توضيحي لخريطة محطات نفطال" class="relative w-full rounded-xl border-8 border-white object-cover shadow-card" /></div>
+        </div>
+      </section>
+
+      <section class="bg-white py-16">
+        <div class="mx-auto grid max-w-7xl overflow-hidden rounded-xl bg-naftal-700 px-5 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:px-0">
+          <div class="relative min-h-[250px]"><img src="/manus-storage/emahata-tyres_c8dfd147.jpg" alt="عجلات مطاطية جديدة" class="absolute inset-0 h-full w-full object-cover" /><div class="absolute inset-0 bg-naftal-700/25"></div></div>
+          <div class="relative py-10 text-white lg:px-12 lg:py-12"><div class="absolute bottom-0 left-0 top-0 w-2 bg-naftal-yellow"></div><div class="flex gap-4"><div class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white/10 text-naftal-yellow"><i data-lucide="lock-keyhole" class="h-5 w-5"></i></div><div><p class="text-sm font-bold text-yellow-100">حماية البيانات الشخصية</p><h2 class="mt-1 text-2xl font-black">بياناتك تستحق أقصى درجات العناية</h2><p class="mt-4 max-w-2xl leading-7 text-blue-100">تتم معالجة معلوماتكم الشخصية في إطار احترام التشريع الوطني المتعلق بحماية البيانات، ولأغراض تسيير الطلب وخدمة الاستلام فقط.</p><a href="#" class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-naftal-yellow hover:text-yellow-100">اطلع على سياسة الخصوصية <i data-lucide="arrow-left" class="h-4 w-4"></i></a></div></div></div>
+        </div>
+      </section>
+
+      <section id="tracking" class="border-y border-slate-200 bg-slate-50 py-12"><div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-5 px-5 sm:px-8 md:flex-row md:items-center"><div><p class="text-sm font-extrabold text-naftal-600">لديك طلب قائم؟</p><h2 class="mt-1 text-2xl font-black text-naftal-700">تتبع حالة طلبك بسهولة</h2></div><button class="btn-primary inline-flex items-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-extrabold text-naftal-700 shadow-sm ring-1 ring-naftal-700/15 hover:bg-naftal-50" data-open-modal="tracking"><i data-lucide="scan-search" class="h-5 w-5 text-naftal-600"></i> إدخال رقم الطلب</button></div></section>
+    </main>
+
+    <footer id="contact" class="bg-naftal-800 text-white"><div class="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 md:grid-cols-2 lg:grid-cols-4"><div><div class="flex items-center gap-3"><span class="grid h-11 w-11 place-items-center rounded-xl border border-blue-500 bg-blue-900"><img src="/manus-storage/emahata-logo_a4748405.png" alt="رمز نفطال" class="h-8 w-8 object-contain" /></span><span><strong class="block text-lg font-black">نفطال</strong><span class="text-xs text-blue-200" dir="ltr">e-mahata</span></span></div><p class="mt-4 max-w-xs text-sm leading-7 text-blue-100">بوابتكم الرقمية لحجز العجلات والوصول إلى خدمات ومحطات نفطال.</p></div><div><h3 class="text-sm font-black text-naftal-yellow">روابط سريعة</h3><ul class="mt-4 space-y-3 text-sm text-blue-100"><li><a href="#booking" class="hover:text-white">حجز العجلات المطاطية</a></li><li><a href="#stations" class="hover:text-white">نقاط البيع والمحطات</a></li><li><a href="#tracking" class="hover:text-white">تتبع الطلب</a></li></ul></div><div><h3 class="text-sm font-black text-naftal-yellow">المساعدة والدعم</h3><ul class="mt-4 space-y-3 text-sm text-blue-100"><li class="flex gap-2"><i data-lucide="phone" class="h-4 w-4 text-naftal-yellow"></i> مركز الاتصالات <bdi dir="ltr">3305</bdi></li><li class="flex gap-2"><i data-lucide="mail" class="h-4 w-4 text-naftal-yellow"></i> contact@naftal.dz</li><li class="flex gap-2"><i data-lucide="map-pin" class="h-4 w-4 text-naftal-yellow"></i> الجزائر</li></ul></div><div><h3 class="text-sm font-black text-naftal-yellow">إشعارات الخدمة</h3><p class="mt-4 text-sm leading-7 text-blue-100">تابع آخر المعلومات المتعلقة بالخدمات الرقمية ونقاط الاستلام.</p><button class="mt-4 rounded-md border border-blue-400 px-4 py-2 text-sm font-bold text-white hover:bg-blue-700" data-open-modal="contact">اتصل بنا</button></div></div><div class="border-t border-blue-700"><div class="mx-auto flex max-w-7xl flex-col justify-between gap-3 px-5 py-5 text-xs text-blue-200 sm:px-8 md:flex-row"><p>جميع الحقوق محفوظة © نفطال 2026</p><div class="flex gap-5"><a href="#" class="hover:text-white">إشعار قانوني</a><a href="#" class="hover:text-white">سياسة الخصوصية</a><a href="#" class="hover:text-white">شروط الاستخدام</a></div></div></div></footer>
+
+    <div id="modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4 modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="w-full max-w-md rounded-xl bg-white p-6 shadow-2xl"><div class="flex items-start justify-between gap-4"><div><p id="modalEyebrow" class="text-xs font-bold text-naftal-600"></p><h2 id="modalTitle" class="mt-1 text-xl font-black text-naftal-700"></h2></div><button id="modalClose" class="grid h-9 w-9 place-items-center rounded-md bg-slate-100 text-slate-500 hover:bg-slate-200" aria-label="إغلاق"><i data-lucide="x" class="h-5 w-5"></i></button></div><div id="modalContent" class="mt-5"></div></div></div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      const modal = document.getElementById('modal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalEyebrow = document.getElementById('modalEyebrow');
+      const modalContent = document.getElementById('modalContent');
+      const templates = {
+        login: { eyebrow: 'حساب e-mahata', title: 'تسجيل الدخول', content: '<form class="grid gap-3"><input class="rounded-md border border-slate-300 px-4 py-3 text-sm outline-none focus:border-naftal-700" placeholder="رقم الهاتف أو البريد الإلكتروني" /><input class="rounded-md border border-slate-300 px-4 py-3 text-sm outline-none focus:border-naftal-700" type="password" placeholder="كلمة المرور" /><button class="btn-primary rounded-md bg-naftal-700 px-4 py-3 font-extrabold text-white" type="button" onclick="closeModal()">متابعة</button><p class="text-center text-xs text-slate-500">هذه واجهة توضيحية؛ سيتم ربط الحسابات بالخدمة عند توفرها.</p></form>' },
+        signup: { eyebrow: 'خطوة أولى نحو الخدمة', title: 'إنشاء حساب جديد', content: '<form class="grid gap-3"><input class="rounded-md border border-slate-300 px-4 py-3 text-sm outline-none focus:border-naftal-700" placeholder="الاسم واللقب" /><input class="rounded-md border border-slate-300 px-4 py-3 text-sm outline-none focus:border-naftal-700" placeholder="رقم الهاتف" /><button class="btn-primary rounded-md bg-naftal-yellow px-4 py-3 font-extrabold text-naftal-800" type="button" onclick="closeModal()">إنشاء الحساب</button></form>' },
+        station: { eyebrow: 'خدمة تحديد الموقع', title: 'خريطة المحطات', content: '<div class="rounded-lg bg-naftal-50 p-5 text-center"><i data-lucide="map-pinned" class="mx-auto h-9 w-9 text-naftal-700"></i><p class="mt-3 text-sm leading-6 text-slate-600">ستعرض هذه الخدمة مراكز نفطال القريبة منك وساعات عملها عند ربط بيانات المواقع.</p><button class="mt-4 rounded-md bg-naftal-700 px-4 py-2.5 text-sm font-extrabold text-white" onclick="closeModal()">حسنًا</button></div>' },
+        tracking: { eyebrow: 'متابعة الطلب', title: 'أدخل رقم طلبك', content: '<form id="trackingForm" class="grid gap-3"><input id="orderNumber" class="rounded-md border border-slate-300 px-4 py-3 text-sm outline-none focus:border-naftal-700" placeholder="مثال: EM-2026-1205" /><button class="rounded-md bg-naftal-700 px-4 py-3 font-extrabold text-white" type="submit">البحث عن الطلب</button><p id="trackingResult" class="hidden rounded-md bg-naftal-50 p-3 text-center text-sm font-bold text-naftal-700"></p></form>' },
+        contact: { eyebrow: 'نحن هنا للمساعدة', title: 'تواصل مع نفطال', content: '<div class="space-y-4 text-sm text-slate-600"><p>للاستفسارات المتعلقة بخدمات e-mahata، اتصل بمركز الاتصالات على الرقم <strong dir="ltr" class="text-naftal-700">3305</strong>.</p><a class="inline-flex items-center gap-2 rounded-md bg-naftal-700 px-4 py-3 font-extrabold text-white" href="mailto:contact@naftal.dz"><i data-lucide="mail" class="h-4 w-4"></i> إرسال بريد إلكتروني</a></div>' }
+      };
+      function iconize(){ lucide.createIcons(); }
+      function closeModal(){ modal.classList.add('hidden'); modal.classList.remove('flex'); }
+      window.closeModal = closeModal;
+      document.querySelectorAll('[data-open-modal]').forEach(button => button.addEventListener('click', () => { const view = templates[button.dataset.openModal]; modalEyebrow.textContent = view.eyebrow; modalTitle.textContent = view.title; modalContent.innerHTML = view.content; modal.classList.remove('hidden'); modal.classList.add('flex'); iconize(); const trackingForm = document.getElementById('trackingForm'); if(trackingForm) trackingForm.addEventListener('submit', (event) => { event.preventDefault(); const result = document.getElementById('trackingResult'); result.textContent = 'تم استلام رقم الطلب. ستظهر حالة الطلب هنا عند ربط الخدمة.'; result.classList.remove('hidden'); }); }));
+      document.getElementById('modalClose').addEventListener('click', closeModal);
+      modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
+      document.addEventListener('keydown', (event) => { if(event.key === 'Escape') closeModal(); });
+      document.getElementById('mobileMenuBtn').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('hidden'));
+      document.querySelectorAll('#mobileMenu a').forEach(a => a.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden')));
+      document.getElementById('heroStartBtn').addEventListener('click', () => document.getElementById('booking').scrollIntoView({behavior:'smooth', block:'start'}));
+      document.getElementById('tireSearchForm').addEventListener('submit', (event) => { event.preventDefault(); const fields = [...event.currentTarget.querySelectorAll('select')]; const alert = document.getElementById('formAlert'); const valid = fields.every(field => field.value); alert.className = 'mt-4 rounded-md border px-4 py-3 text-sm font-bold'; if (!valid) { alert.classList.add('border-red-200','bg-red-50','text-red-700'); alert.innerHTML = '<i data-lucide="circle-alert" class="ml-2 inline h-4 w-4"></i> يرجى اختيار جميع المواصفات ومركز الاستلام قبل المتابعة.'; } else { alert.classList.add('border-green-200','bg-green-50','text-green-800'); alert.innerHTML = '<i data-lucide="circle-check" class="ml-2 inline h-4 w-4"></i> تم العثور على خيارات مبدئية مطابقة. يمكنك متابعة الطلب بعد تسجيل الدخول.'; } alert.classList.remove('hidden'); iconize(); });
+      iconize();
+    </script>
+  </body>
+</html>
